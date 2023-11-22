@@ -7,7 +7,7 @@
 }
 
 body {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   height: 200vh;
   min-width: 1200px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -32,15 +32,12 @@ a:visited {
   color: black;
 }
 
-header {
-}
-
 #topbar {
   display: flex;
   flex-direction: column;
 }
 
-.top__navber-menu li a {
+.top__navbar-menu li a {
   color: var(--fontColor);
 }
 
@@ -56,7 +53,7 @@ header {
   align-items: center;
 }
 
-.top__navber-menu {
+.top__navbar-menu {
   font-size: 13px;
   display: flex;
   gap: 10px;
@@ -64,16 +61,16 @@ header {
   color: #9a9a9a;
 }
 
-.top__navber-menu li::after {
+.top__navbar-menu li::after {
   padding-left: 5px;
   content: '|';
 }
 
-.top__navber-menu li:last-child::after {
+.top__navbar-menu li:last-child::after {
   content: '';
 }
 
-.top__navber-menu li:hover {
+.top__navbar-menu li:hover {
   text-decoration: underline;
 }
 
@@ -96,16 +93,23 @@ header {
   margin: 0;
   flex-wrap: nowrap;
   border-top: 2px solid var(--bgColor);
+  z-index: 9999;
+  font-size: 16px;
 }
 
 .dropdown-menu {
   display: none;
+  opacity: 0;
 }
 
 .dropdown {
   display: flex;
   position: relative;
   justify-content: center;
+}
+
+.dropdown-item a {
+  color: black;
 }
 
 .menu-item {
@@ -120,6 +124,7 @@ header {
   height: 50px;
   align-items: center;
   justify-content: start;
+  font-weight: bold;
 }
 
 .menu-item:hover > .dropdown-menu {
@@ -131,9 +136,30 @@ header {
   min-width: 150px;
   background-color: white;
   color: black;
-  font-size: 16px;
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+  animation: slide-fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .menu-item:hover > a {
@@ -165,6 +191,13 @@ header {
   /* background-color: black; */
 }
 
-.dark-cover {
-  background-color: black;
+#container.on::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.78);
+  animation: fade-in 300ms cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
