@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 @import url('reset.css');
 
+:root {
+  --bgColor: #5a63b0;
+  --fontColor: #9a9a9a;
+}
+
 body {
-  box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+  /* box-sizing: border-box; */
+  height: 200vh;
+  min-width: 1200px;
   font-family: 'Noto Sans KR', sans-serif;
   color: black;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /* General  */
@@ -16,8 +23,25 @@ body {
   box-sizing: border-box;
 }
 
+a:active,
+a:hover {
+  outline: 0;
+}
+
 a:visited {
-  color: #9a9a9a;
+  color: black;
+}
+
+header {
+}
+
+#topbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.top__navber-menu li a {
+  color: var(--fontColor);
 }
 
 #top__navbar {
@@ -33,7 +57,7 @@ a:visited {
 }
 
 .top__navber-menu {
-  font-size: 15px;
+  font-size: 13px;
   display: flex;
   gap: 10px;
   margin-right: 20px;
@@ -47,4 +71,100 @@ a:visited {
 
 .top__navber-menu li:last-child::after {
   content: '';
+}
+
+.top__navber-menu li:hover {
+  text-decoration: underline;
+}
+
+/** bottom navbar */
+
+#bottom__navbar {
+  margin-top: 20px;
+}
+
+.bottom__navbar-menu {
+  /* margin: 3rem 0; */
+  background-color: white;
+}
+
+.bottom__menu {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+  border-top: 2px solid var(--bgColor);
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.menu-item {
+  cursor: pointer;
+  margin: 0 20px 0 20px;
+  width: 100%;
+}
+
+.menu-link {
+  min-width: 90px;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: start;
+}
+
+.menu-item:hover > .dropdown-menu {
+  width: 100%;
+  display: block;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  min-width: 150px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-item:hover > a {
+  color: var(--bgColor);
+  transition: 0.3s ease-in-out;
+}
+
+.bottom__menu .menu-item:hover {
+  color: white;
+}
+
+.dropdown-item {
+  padding: 5px;
+}
+
+.dropdown-item:hover a {
+  color: white;
+  background-color: var(--bgColor);
+  transition: 0.3s ease-in-out;
+}
+
+.dropdown-link {
+  padding: 0 15px 0 15px;
+}
+
+#container {
+  height: 100%;
+  background-image: url('https://pyongtaek-e.goept.kr/upload/pyongtaek-e/widg/img_66920c1c-f650-496c-a8d7-dbe5533507041640239107325.png');
+  /* background-color: black; */
+}
+
+.dark-cover {
+  background-color: black;
 }

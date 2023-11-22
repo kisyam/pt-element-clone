@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pt-bootcamp-school</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/dadf627110.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header id="header">
@@ -31,7 +36,7 @@
                   name="siteSearchForm"
                 />
                 <button type="button">
-                  <span>검색</span>
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span>
                 </button>
               </form>
             </div>
@@ -41,29 +46,170 @@
         <!-- bottom nav bar -->
 
         <div id="bottom__navbar">
-          <div id="blind" style="display: none; opacity: 1"></div>
+          <!-- <div id="blind" style="display: none; opacity: 1"></div> -->
           <div id="gnb">
             <div class="bottom__navbar-menu">
-              <ul>
-                <li>
-                  <a href="">학교소개</a>
-                  <div class="hidden__menu">
-                    <ul>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                  </div>
+              <ul class="bottom__menu">
+                <li class="menu-item dropdown">
+                  <a class="menu-link" href="">학교소개</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >우리학교방문을환영합니다</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학교연혁</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">교육방향</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학교상징</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">교직원소개</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학교현황</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">오시는길</a>
+                    </li>
+                  </ul>
                 </li>
-                <li><a href="">학교마당</a></li>
-                <li><a href="">열린마당</a></li>
-                <li><a href="">학생마당</a></li>
-                <li><a href="">교육활동</a></li>
-                <li><a href="">선생님마당</a></li>
-                <li><a href="">행정마당</a></li>
+
+                <li class="menu-item dropdown">
+                  <a class="menu-link" href="">학교마당</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학교일정</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">공지사항</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">가정통신문</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">보건소식</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">급식소식</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학교앨범</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-item dropdown">
+                  <a class="menu-link" href="">열린마당</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학부모마당</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >학교운영위원회</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >학교폭력/성희롱성폭력 신고</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">이력관리</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-item dropdown">
+                  <a class="menu-link" href="">학생마당</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학생마당</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >학생인권조례</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >사이버상담실</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학생자치회</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >평택초운동부</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >학생선수고충처리센터</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-item dropdown">
+                  <a class="menu-link" href="">교육활동</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">방과후학교</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">돌봄교실</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >혁신공감학교</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학교혁신</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#">학교도서관</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-item dropdown">
+                  <a class="menu-link" href="">선생님마당</a>
+                  <ul class="dropdown-menu"></ul>
+                </li>
+
+                <li class="menu-item dropdown">
+                  <a class="menu-link" href="">행정마당</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >행정정보공개</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >학교시설개방민원</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >학교재정공개</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="menu-link dropdown-link" href="#"
+                        >산업안전보건</a
+                      >
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -71,6 +217,8 @@
       </div>
     </header>
     <div id="container"></div>
+    <div id="footer"></div>
+    <div id="footer"></div>
     <div id="footer"></div>
   </body>
 </html>
