@@ -3,13 +3,7 @@ const container = document.getElementById('container');
 const menuItems = document.querySelectorAll('.menu-item');
 const dropdowns = document.querySelectorAll('.dropdown');
 
-// bottomMenu.addEventListener('mouseover', (e) => {
-//   container.classList.add('on');
-// });
-
-// bottomMenu.addEventListener('mouseout', (e) => {
-//   container.classList.remove('on');
-// });
+// when mouseover in dropdown container will be darker
 
 dropdowns.forEach((dropdown) => {
   dropdown.addEventListener('mouseover', (e) => {
