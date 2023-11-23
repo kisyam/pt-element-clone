@@ -7,7 +7,6 @@ const dropdowns = document.querySelectorAll('.dropdown');
 
 dropdowns.forEach((dropdown) => {
   dropdown.addEventListener('mouseover', (e) => {
-    console.log(e.currentTarget);
     const isMenuItem = e.currentTarget.classList.contains('menu-item');
     if (isMenuItem) {
       container.classList.add('on');
